@@ -12,7 +12,7 @@ https://github.com/vlandlive/scene-based-generative-agent/assets/135107741/b206e
 
 ## Quick Start
 
-First, you need to configure your own `OPENAI_API_KEY`. You can get You can get it from [OpenAI API Key](https://platform.openai.com/account/api-keys). It is recommended that you use a paid account, otherwise you will receive frequency restrictions during use. For details, please refer to [OpenAI rate limits](https://platform.openai.com/docs/guides/rate-limits/overview)
+First, you need to configure your own `OPENAI_API_KEY`. You can get it from [OpenAI API Key](https://platform.openai.com/account/api-keys). It is recommended that you use a paid account, otherwise you will receive frequency restrictions during use. For details, please refer to [OpenAI rate limits](https://platform.openai.com/docs/guides/rate-limits/overview)
 
 Set it in `agent/config.py`.
 ```python
@@ -23,7 +23,8 @@ Next, you need to configure your own Vland config in `main.py`.
 
 You can get `apiId`, `apiKey`, `eventId`, `spaceId` in [Vland](https://us.vland.live/app) platform. 
 
-Email vland.live@gmail.com for support.
+Please join our discord group [![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/6Nb9VQP67m) to get early access to your config key.
+
 ```python
 wsconfig = {
     "apiId": "your vland id",
