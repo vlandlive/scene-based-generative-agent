@@ -1,0 +1,189 @@
+syntax = "proto3";
+package pb;
+option go_package = "/;pb";
+
+enum RoleType{
+  Role_1 = 0;
+  Role_2 = 1;
+  Role_3 = 2;
+  Role_4 = 3;
+  Role_5 = 4;
+}
+
+enum Identity{
+  Normal = 0; // 普通身份
+  Guest = 1; // 游客模式
+}
+
+enum MoveMode{
+  NORMAL_MODE = 0;
+  FLY_MODE = 1;
+}
+
+enum StatusType{
+  NORMAL = 0;
+  OFFLINE = 1 ;
+}
+
+enum AnimationType{
+  DANCE_1 = 0;
+  DANCE_2 = 1;
+  DANCE_3 = 2;
+  DANCE_4 = 3;
+  DANCE_5 = 4;
+  DANCE_6 = 5;
+  DANCE_7 = 6;
+  DANCE_8 = 7;
+  DANCE_9 = 8;
+  DANCE_10 = 9;
+  //
+  HELLO_B =10;
+  HELLO_F =11;
+  HELLO_P =12;
+  //
+  JUMP_B = 13;
+  JUMP_F = 14;
+  JUMP_P = 15;
+  //
+  STAND_B=16;
+  STAND_F=17;
+  STAND_P=18;
+  //
+  WALK_B=19;
+  WALK_F=20;
+  WALK_P=21;
+  //
+  SIT_B=22;
+  SIT_F=23;
+  SIT_P=24;
+}
+
+enum DirectionType{
+  LEFT = 0;
+  RIGHT = 1;
+  UP = 2;
+  DOWN = 3;
+}
+
+message Position  {
+  string Pid = 1;//id
+  string RealName = 2;//昵称
+  // @inject_tag: json:"X"
+  int32  X = 3;//X坐标
+  // @inject_tag: json:"Y"
+  int32  Y = 4;//Y坐标
+  // @inject_tag: json:"Z"
+  int32 Z = 5;
+  // @inject_tag: json:"Angle"
+  int32 Angle = 6;
+  // @inject_tag: json:"D"
+  DirectionType  D = 7;//面向
+  // @inject_tag: json:"A"
+  AnimationType A = 8;//动作
+  // @inject_tag: json:"S"
+  StatusType  S = 9;//状态
+  bool B = 10;//是否刚刚出生（出生动画）
+  string I = 11;//服装
+  // @inject_tag: json:"moveMode"
+  MoveMode MoveMode = 12;//移动状态
+  bool IsRaiseHand = 13;//是否举手状态
+  Identity Identity = 14; // 身份
+  repeated string Pets = 15; // 携带宠物信息
+  string RoleName = 16; // 用户角色名称
+  // @inject_tag: json:"RoleType"
+  RoleType RoleType = 17; // 用户角色类型
+}
+
+message Error {
+  string  Code = 1;
+  string   Msg = 2;
+  map<string, string>  Metadata = 3;
+}
+
+message ConnectSpaceReq {
+  string SpaceId = 1;
+  string Pid = 2;
+  string EventId = 3;
+}
+
+message GetPlayerInfoCmd{
+  string eventId = 1;
+  string spaceId = 2;
+  repeated string pidArr = 3;
+}
+
+message PlayerPositionInfos{
+  repeated Position positionArr = 1;
+}
+
+message MovePosition  {
+  string Pid = 1;
+  // @inject_tag: json:"X"
+  int32 X = 2;
+  // @inject_tag: json:"Y"
+  int32 Y = 3;
+  bool Transfer = 4;
+}
+
+message AddPlayerListenerCmd{
+  string eventId = 1;
+  string spaceId = 2;
+  string listenerId = 3;
+  repeated string pidArr = 4;
+  int32 signal = 5;
+}
+
+message RemovePlayerListenerCmd{
+  string eventId = 1;
+  string spaceId = 2;
+  string listenerId = 3;
+  repeated string pidArr = 4;
+}
+
+message RobotJoinInfo{
+  string RobotId = 1;
+  string RobotName = 2;
+  string Avatar = 3;
+  int32 X = 4;
+  int32 Y = 5;
+}
+
+message RobotJoinCmd{
+  string EventId = 1;
+  string SpaceId = 2;
+  repeated RobotJoinInfo joinInfoArr = 3;
+}
+
+message RobotExitCmd{
+  string EventId = 1;
+  string SpaceId = 2;
+  repeated string RobotIdArr = 3; //为空删除所有
+}
+
+message RobotMoveCmd{
+  string EventId = 1;
+  string SpaceId = 2;
+  string RobotId = 3;
+  int32 X = 4;
+  int32 Y = 5;
+  string ChatMessage = 6;
+}
+
+message GetSpecialAreaPlayerInfoCmd{
+  string eventId = 1;
+  string spaceId = 2;
+  int32 index = 3; // 区域序号（唯一）
+}
+
+message Pids  {
+  repeated string Pid = 1;
+}
+
+message Pid  {
+  string Pid = 1;
+}
+
+message GameTriggerSpecialAreaNotice{
+  string pid = 1; // 用户id
+  string name = 2; // 区域名称
+}
