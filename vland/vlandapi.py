@@ -29,12 +29,7 @@ class VlandAPI:
     Get all the data of the space
     '''    
     def get_map_info(self):
-        if self.wsconfig['environment'] == "dev": 
-            url = "https://dev-api.vland.live"
-        elif self.wsconfig['environment'] == "beta":
-            url = "https://beta-api.vland.live"
-        else:
-            url = "https://api.vland.live"
+        url = "https://us-api.vland.live"
         
         route = '/sdk/space/expand/' + self.wsconfig["spaceId"]
         headers = {
@@ -257,12 +252,7 @@ class VlandAPI:
     Initialize nano websocket
     '''
     def _init_nano(self):
-        if self.wsconfig['environment'] == "dev": 
-            host = "wss://dev-game.vland.live"
-        elif self.wsconfig['environment'] == "beta":
-            host = "wss://beta-game.vland.live"
-        else:
-            host = "wss://game.vland.live"
+        host = "wss://us-game.vland.live"
     
         params = {
             "host": host,

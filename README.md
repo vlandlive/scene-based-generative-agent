@@ -31,7 +31,6 @@ wsconfig = {
     "apiKey": "event api key",
     "eventId": "event id",
     "spaceId": "space id",
-    "environment": "release",
     "listener": get_server_response
 }
 ```
@@ -86,6 +85,36 @@ You need to check the network and your Vland config, if it doesn't happen accord
 Then these agents will run according to your logic and ChatGPT
 
 ![Space Screenshot](https://cocos.vland.live/docs/python/screenshot3.png)
+
+## Create your own spcae in Vland
+
+The destination of the agent's movement is selected from the marked area in the space。
+
+You can follow the steps below to create a space and edit the area.
+
+1. Sign up and log in to Vland.
+
+2. Create a space in the upper right corner of the page.
+![Step](https://cocos.vland.live/docs/python/step1.png)
+
+3. Enter your event name.
+![Step](https://cocos.vland.live/docs/python/step2.png)
+
+4. Add a new space under your event.
+![Step](https://cocos.vland.live/docs/python/step3.png)
+
+5. We provide many exquisite templates for you to quickly create your space. You can also create an empty map and use the materials we provide to decorate your space
+![Step](https://cocos.vland.live/docs/python/step4.png)
+
+6. Select the space you want to edit
+![Step](https://cocos.vland.live/docs/python/step5.png)
+
+7. Select the *Special interaction* in the *Effect*. Frame the area you want to mark on the map and enter a unique name.
+![Step](https://cocos.vland.live/docs/python/step6.png)
+
+8. Finally, remember to save the map, then you can enter your own space.
+![Step](https://cocos.vland.live/docs/python/step7.png)
+
 ## DIY your script
 Use the interface provided by vland and the method of generating agents.
 

@@ -143,7 +143,6 @@ def generate_agents_by_data():
         "apiKey": "event api key",
         "eventId": "event id",
         "spaceId": "space id",
-        "environment": "release",
         "listener": get_server_response
     }
     eventbus =  EventBus()
