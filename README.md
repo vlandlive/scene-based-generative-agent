@@ -23,7 +23,7 @@ Next, you need to configure your own Vland config in `main.py`.
 
 You can get `apiId`, `apiKey`, `eventId`, `spaceId` in [Vland](https://us.vland.live/app) platform. 
 
-Please join our discord group [![Discord](https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/6Nb9VQP67m) to get early access to your config key.
+Please join our discord group [![Discord](https://dcbadge.vercel.app/api/server/6Nb9VQP67m)](https://discord.gg/6Nb9VQP67m) to get early access to your config key.
 
 ```python
 wsconfig = {
