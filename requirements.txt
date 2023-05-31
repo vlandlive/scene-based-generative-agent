@@ -1,0 +1,14 @@
+asyncio==3.4.3
+base64==0.5.1
+datetime==4.3
+faiss==1.7.0
+json==0.9.7
+langchain==0.0.1
+logging==0.5.1.2
+math==1.0.0
+os==0.1.0
+random==0.1.0
+re==2.2.1
+termcolor==1.1.0
+threading==0.1.0
+websocket==0.2.1
