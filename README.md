@@ -8,7 +8,9 @@ You can watch [Demo video](https://cocos.vland.live/docs/python/demo.mp4).
 
 https://github.com/vlandlive/scene-based-generative-agent/assets/135107741/b206e9d5-dddb-4fb8-8b0e-77041fbe0879
 
+Welome to join our discord group.
 
+[![Discord](https://dcbadge.vercel.app/api/server/6Nb9VQP67m?compact=true)](https://discord.gg/6Nb9VQP67m)
 
 ## Quick Start
 
@@ -23,7 +25,18 @@ Next, you need to configure your own Vland config in `main.py`.
 
 You can get `apiId`, `apiKey`, `eventId`, `spaceId` in [Vland](https://us.vland.live/app) platform. 
 
-Please join our discord group [![Discord](https://dcbadge.vercel.app/api/server/6Nb9VQP67m?compact=true)](https://discord.gg/6Nb9VQP67m) to get early access to your config key.
+* The `apiId` is your user id. It is displayed in the account in the upper right corner of the page.
+
+![Vland config](https://cocos.vland.live/docs/python/config1.png)
+
+* The `apiKey` is for each different vland events. You can create and copy it in *Manage events*
+
+![Vland config](https://cocos.vland.live/docs/python/config2.png)
+
+* The `eventId` and `spaceId` is for each different space in the event. You can find them in the link after entering the space.
+
+![Vland config](https://cocos.vland.live/docs/python/config3.png)
+
 
 ```python
 wsconfig = {
@@ -162,7 +175,7 @@ We will continue to add more interfaces.
 And the functions that can be realized can also refer to [Vland websocket sdk (node.js)](https://cocos.vland.live/docs/)
 ## Support
 
-For support, email vland.live@gmail.com
+For support, you can join our discord group [![Discord](https://dcbadge.vercel.app/api/server/6Nb9VQP67m?compact=true)](https://discord.gg/6Nb9VQP67m). Or email vland.live@gmail.com
 
 
 ## References
