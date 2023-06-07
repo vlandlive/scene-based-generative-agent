@@ -99,7 +99,7 @@ Then these agents will run according to your logic and ChatGPT
 
 ![Space Screenshot](https://cocos.vland.live/docs/python/screenshot3.png)
 
-## Create your own spcae in Vland
+## Create your own space in Vland
 
 The destination of the agent's movement is selected from the marked area in the space。
 
