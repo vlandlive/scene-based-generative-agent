@@ -101,7 +101,7 @@ Then these agents will run according to your logic and ChatGPT
 
 ## Create your own space in Vland
 
-The destination of the agent's movement is selected from the marked area in the space。
+The destination of the agent's movement is selected from the marked area in the space.
 
 You can follow the steps below to create a space and edit the area.
 
